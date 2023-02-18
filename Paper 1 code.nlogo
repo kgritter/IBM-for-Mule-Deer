@@ -32,8 +32,8 @@ vonmise
 
 ]
 turtles-own
-[ infected?           ;; If true, the person is infected
-  susceptible? ;; Tracks whether the person was initially susceptible
+[ infected?
+  susceptible?
   female?
   male?
   angle
@@ -162,9 +162,6 @@ to setup-people
    setxy (item 3 item group csv) (item 4 item group csv)
     set HRX xcor
     set HRY ycor]
-    ;set Summergroup group
-   ; switchHR
-  ;  set choice 0
 
 
   foreach remove-duplicates([group] of turtles) [x -> ask one-of turtle-set (turtles with [group = x]) [set leader true]]
